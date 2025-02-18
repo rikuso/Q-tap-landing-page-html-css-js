@@ -17,7 +17,12 @@ body, html {
     justify-content: center;
     overflow: hidden;
 }
-
+h5{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
 /* Estilos para la barra de navegación */
 .navbar {
     display: flex;
@@ -159,6 +164,7 @@ video {
     opacity: 0;
     transform: translateY(100%);
     padding: 20px;
+    padding-bottom: 0; /* Elimina el padding inferior de la sección */
 }
 
 .section.active {
@@ -166,6 +172,10 @@ video {
     transform: translateY(0);
 }
 
+.section p {
+    margin-bottom: 0; /* Elimina el margen inferior del párrafo */
+    padding-bottom: 0; /* Elimina el padding inferior del párrafo */
+}
 /* Estilos Responsivos */
 @media (max-width: 1024px) {
     .section h2 {
@@ -218,7 +228,7 @@ video {
     border-color: #007bff;
     text-transform: uppercase;
     border-radius: 30px;
-    padding: 0.75rem 1.5rem;
+    padding: 0.55rem 1.1rem;
     cursor: pointer;
     text-decoration: none;
     font-weight: 600;
@@ -265,6 +275,8 @@ video {
     justify-content: center;
     gap: 30px;
     padding: 20px;
+    margin-top: 0; /* Elimina el margen superior del contenedor de tarjetas */
+    padding-top: 0; /* Elimina el padding superior del contenedor de tarjetas */
 }
 
 /* Estilos para las tarjetas */
@@ -386,6 +398,7 @@ video {
 
 .carousel-item {
     flex: 0 0 50%;
+    bottom: 20px; /* Ajusta la posición del texto */
     box-sizing: border-box;
     background-color: #000;
     border-radius: 10px;
@@ -424,7 +437,8 @@ video {
 .carousel-nav .prev, .carousel-nav .next {
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
-    padding: 10px;
+    padding: 1px;
+    margin-top: 48px;
     cursor: pointer;
     font-size: 2em;
     border-radius: 50%;
@@ -554,13 +568,7 @@ video {
     border-radius: 10px;
 }
 
-.prevG {
-    left: 10px;
-}
 
-.nextG {
-    right: 10px;
-}
 
 button:hover {
     background: rgba(255, 255, 255, 0.3);
@@ -852,79 +860,112 @@ footer {
 
 
 
-/* Media Query para dispositivos con ancho máximo de 375px */
 @media (max-width: 375px) {
-    body, html {
-        font-size: 14px; /* Reduce el tamaño base del texto */
+    #about {
+        padding: 1px; /* Reduce el padding */
     }
 
-    .navbar img {
-        width: 15%; /* Ajusta el tamaño del logo */
+    #about h2 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+        text-align: center; /* Centra el título */
     }
 
-    .navbar ul {
-        gap: 5px; /* Reduce el espacio entre los elementos del menú */
-    }
-
-    .navbar ul li a {
-        font-size: 1rem; /* Reduce el tamaño del texto del menú */
-        padding: 5px; /* Reduce el padding */
-    }
-
-    .section h2 {
-        font-size: 1.5rem; /* Reduce el tamaño de los títulos */
-    }
-
-    .section p {
+    #about p {
         font-size: 0.9rem; /* Reduce el tamaño del texto */
+        max-width: 100%; /* Asegura que el texto no se desborde */
+    }
+
+    .cards-container {
+        flex-direction: column; /* Apila las tarjetas verticalmente */
+        align-items: center; /* Centra las tarjetas */
     }
 
     .info-card {
-        padding: 20px; /* Reduce el padding de las tarjetas */
-        font-size: 0.9rem; /* Reduce el tamaño del texto en las tarjetas */
+        width: 50%; /* Asegura que las tarjetas ocupen casi todo el ancho */
+        padding: 15px; /* Reduce el padding */
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+    }
+}
+@media (max-width: 375px) {
+    #services {
+        padding: 20px; /* Reduce el padding */
+    }
+
+    #services h2 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+        text-align: center; /* Centra el título */
+    }
+
+    #services p {
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+        max-width: 100%; /* Asegura que el texto no se desborde */
+    }
+
+    .carousel {
+        width: 100%; /* Asegura que el carrusel ocupe todo el ancho */
+    }
+
+    .carousel-item {
+       
+        bottom: 20px; /* Ajusta la posición del texto */
     }
 
     .carousel-item h3 {
-        font-size: 1.2rem; /* Reduce el tamaño de los títulos en el carrusel */
+        font-size: 1.2rem; /* Reduce el tamaño del título */
     }
 
     .carousel-item p {
-        font-size: 0.9rem; /* Reduce el tamaño del texto en el carrusel */
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+    }
+}
+@media (max-width: 375px) {
+    #benefits {
+        padding: 20px; /* Reduce el padding */
     }
 
-    .video-background video {
-        width: 100%;
-        height: auto; /* Asegura que el video se ajuste al ancho del contenedor */
+    #benefits h2 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+        text-align: center; /* Centra el título */
     }
 
-    .whatsapp-button {
-        padding: 6px 8px; /* Reduce el padding del botón de WhatsApp */
-        font-size: 0.8rem; /* Reduce el tamaño del texto del botón */
+    #benefits p {
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+        max-width: 100%; /* Asegura que el texto no se desborde */
     }
-
-    .whatsapp-button i {
-        font-size: 1rem; /* Reduce el tamaño del icono */
+}
+@media (max-width: 375px) {
+    .contact-form-section {
+        padding: 15px; /* Reduce el padding en pantallas pequeñas */
+        margin-bottom: 100px; /* Añade un margen inferior para evitar el solapamiento con el footer */
     }
 
     .contact-form-section h2 {
-        font-size: 1.2rem; /* Reduce el tamaño del título del formulario */
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+        text-align: center; /* Centra el título */
     }
 
     .contact-form-section p {
-        font-size: 0.8rem; /* Reduce el tamaño del texto del formulario */
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+        max-width: 100%; /* Asegura que el texto no se desborde */
     }
 
     .contact-form input,
     .contact-form select,
     .contact-form textarea {
-        font-size: 0.8rem; /* Reduce el tamaño del texto en los campos del formulario */
+        font-size: 0.9rem; /* Reduce el tamaño del texto en los campos */
+    }
+    .submit-btn {
+        font-size: 0.9em; /* Reduce el tamaño del texto del botón */
+        padding: 8px 15px; /* Reduce el padding del botón */
+    }
+}
+/* Ajustes específicos para pantallas pequeñas */
+@media (max-width: 375px) {
+    .section p {
+        margin-bottom: 0; /* Elimina el margen inferior del párrafo en pantallas pequeñas */
     }
 
-    .footer-section h3 {
-        font-size: 0.9rem; /* Reduce el tamaño de los títulos en el footer */
-    }
-
-    .footer-section a {
-        font-size: 0.7rem; /* Reduce el tamaño del texto en el footer */
+    .cards-container {
+        margin-top: 0; /* Elimina el margen superior del contenedor de tarjetas en pantallas pequeñas */
     }
 }
