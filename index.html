@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-Tap Software</title>
+    <link rel="stylesheet" href="styles.css">
+<!-- Agregar Font Awesome para los iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar navbar-brand">
+        <img src="logo.png" class="logo-container" alt="logo Q-Tap Software">
+        <!-- Botón del menú hamburguesa -->
+        <div class="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" data-index="0">Home</a></li>
+                <li><a href="#" data-index="1">Acerca de Nosotros</a></li>
+                <li><a href="#" data-index="2">Servicios</a></li>
+                <li><a href="#" data-index="3">Beneficios</a></li>
+                <li><a href="#" data-index="4">Galleria</a></li>
+                <li><a href="#" data-index="5">Bono</a></li>
+                <li><a href="#" data-index="6">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Indicador de Progreso -->
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+
+    <!-- Sección de contenido dinámico con scroll fluido -->
+    <section class="container">
+        <div class="content" id="content-sections">
+            <div class="section inicio" id="home">
+                <div class="video-background">
+                    <video autoplay muted loop>
+                        <source src="fondo.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+                <div class="caption d-flex align-items-center justify-content-center">
+                    <div class="p-5" style="width: 100%; max-width: 1200px;">
+                        <h5 class="text-white text-uppercase mb-md-3">Q-Tap Software</h5>
+                        <h1 class="display-3 text-white mb-md-4">Innovación y tecnología para tu negocio</h1>
+                        <p class="lead text-white mb-md-4">Desde desarrollo web hasta soluciones NFC personalizadas, diseñamos estrategias digitales a medida para tu éxito.</p>
+                        <br>
+                        <a href="#" class="btn contact py-md-2 px-md-4 font-weight-semi-bold mt-2" data-index="6">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sección de Acerca de Nosotros -->
+            <div class="section" id="about">
+                <h2>Acerca de Nosotros</h2>
+                <p>En Q-Tap Software, nos dedicamos a ofrecer soluciones tecnológicas innovadoras y personalizadas para tu negocio. Con experiencia en desarrollo web, marketing digital, NFC y facturación electrónica, brindamos servicios de alta calidad para ayudarte a crecer en el mundo digital.</p>
+                <div class="cards-container">
+                    <div class="info-card">
+                        <h3>Misión</h3>
+                        <p>Brindamos soluciones tecnológicas personalizadas para transformar los negocios y llevarlos al siguiente nivel.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Visión</h3>
+                        <p>Ser líderes en la innovación tecnológica, ayudando a empresas a adoptar soluciones digitales efectivas y escalables.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sección de Servicios -->
+            <div class="section carousel-container" id="services">
+                <h2>¿Para quién es Q-Tap Software?</h2>
+                <p>En Q-Tap ofrecemos soluciones innovadoras para digitalizar, optimizar y hacer crecer tu negocio. Desde tecnología NFC hasta desarrollo web y estrategias de marketing, te brindamos herramientas para destacar en el mundo digital.</p>
+            
+                <div class="carousel">
+                    <div class="carousel-items">
+                        <div class="carousel-item">
+                            <h3>Desarrollo Web</h3>
+                            <p>Creamos páginas web personalizadas y modernas para empresas y emprendedores, asegurando presencia digital y funcionalidad óptima.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Marketing Digital</h3>
+                            <p>Estrategias digitales efectivas para redes sociales, publicidad y branding que aumentan la visibilidad y clientes potenciales.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Q-Tap NFC</h3>
+                            <p>Llaveros inteligentes con tecnología NFC para compartir información de contacto, redes sociales o pagos digitales de manera instantánea y sin contacto.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Mantenimiento Web</h3>
+                            <p>Mantenimiento continuo para asegurar que los sitios web de tus clientes estén siempre actualizados, seguros y funcionando correctamente.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Impresión 3D</h3>
+                            <p>Fabricación de prototipos y piezas personalizadas en 3D para innovar y optimizar procesos en diversos sectores.</p>
+                        </div>
+                    </div>
+                    <!-- Flechas de navegación -->
+                    <div class="carousel-nav">
+                        <span class="prev">&#10094;</span>
+                        <span class="next">&#10095;</span>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <!-- Sección de Beneficios -->
+            <div class="section carousel-container" id="benefits">
+                <h2>Beneficios de trabajar con Q-Tap Software</h2>
+                <p>Al elegir Q-Tap Software, tu negocio se beneficia de soluciones tecnológicas innovadoras que impulsan su crecimiento, optimizan su eficiencia y mejoran su competitividad en el mercado digital.</p>
+                <div class="carousel">
+                    <div class="carousel-items">
+                        <div class="carousel-item">
+                            <h3>Soluciones Personalizadas</h3>
+                            <p>Nos adaptamos a las necesidades específicas de cada cliente, ofreciendo soluciones que se ajustan a sus objetivos y desafíos.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Incremento en la Visibilidad Digital</h3>
+                            <p>Aumentamos la presencia de tu marca en línea mediante estrategias efectivas de marketing digital y optimización web.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Mejora en la Experiencia del Usuario</h3>
+                            <p>Desarrollamos sitios web responsivos y optimizados que ofrecen una experiencia de usuario excepcional, asegurando una mayor conversión.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Automatización de Procesos</h3>
+                            <p>Implementamos soluciones tecnológicas que automatizan tareas repetitivas, ahorrando tiempo y mejorando la productividad de tu empresa.</p>
+                        </div>
+                    </div>
+                     <!-- Flechas de navegación -->
+                     <div class="carousel-nav">
+                        <span class="prev">&#10094;</span>
+                        <span class="next">&#10095;</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sección de Galería -->
+            <div class="gallery-section section">
+                <h2>Nuestra Galería</h2>
+                <div class="gallery-carousel">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-itemsG">
+                            <img src="q-tap-instagram.jpg" alt="Imagen 1">
+                            <img src="q-tap-redes.jpg" alt="Imagen 2">
+                            <img src="q-tap.jpg" alt="Imagen 3">
+                            <img src="pagina.jpg" alt="Imagen 4">
+                            <img src="q-tap-redes.jpg" alt="Imagen 5">
+                            <img src="q-tap.jpg" alt="Imagen 6">
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            
+            <!-- Sección de Bono de Descuento -->
+            <div class="discount-section section">
+                <div class="discount-content">
+                    <h2>🎉 ¡Aprovecha nuestro Bono de Descuento! 🎉</h2>
+                    <p>Obtén un <span>20% de descuento</span> en tu primer servicio con nosotros.</p>
+                    <p class="small-text">Válido por tiempo limitado. ¡No lo dejes pasar!</p>
+                    <a class="claim-btn" href="https://wa.me/3116231415?text=20% de descuento en tu primer servicio con nosotros Q-tap Software"  target="_blank">¡Reclama tu descuento!</a>
+                </div>
+            </div>
+            
+
+<!-- Sección de Contacto -->
+           <div class="contact-form-section section">
+    <h2>¡Contáctanos!</h2>
+    <p>Déjanos tus datos y consulta lo que necesitas. Te responderemos a la brevedad.</p>
+    <form  class="contact-form">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" required placeholder="Tu nombre">
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required placeholder="Tu correo electrónico">
+
+        <label for="phone">Celular</label>
+        <input type="tel" id="phone" name="phone" required placeholder="Tu número celular">
+
+        <label for="service">Servicio de interés</label>
+        <select id="service" name="service" required>
+            <option value="" disabled selected>Elige un servicio</option>
+            <option value="Desarrollo Web">Desarrollo Web</option>
+            <option value="Marketing Digital">Marketing Digital</option>
+            <option value="Llaveros NFC">Llaveros NFC</option>
+            <option value="Mantenimiento Web">Mantenimiento Web</option>
+            <option value="Consultoría Digital">Consultoría Digital</option>
+        </select>
+
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" required placeholder="Escribe tu mensaje aquí"></textarea>
+
+        <button type="submit" class="submit-btn">Enviar mensaje</button>
+        </form>
+    </div>
+
+            </div>
+        </section>
+<!-- Botón de WhatsApp en la parte inferior -->
+        <a href="https://wa.me/3116231415" class="whatsapp-button" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>¡Contáctanos por WhatsApp!</span>
+        </a>
+
+
+    <!-- Botones de Navegación -->
+
+     <!--
+
+    <div class="navigation-buttons">
+        <button id="prev-btn">Anterior</button>
+        <button id="next-btn">Siguiente</button>
+    </div>
+    
+    -->
+   <!-- Footer -->
+    <footer>
+    <div class="footer-container">
+        <!-- Sección de Información -->
+        <div class="footer-section">
+            <h3>Q-Tap Software</h3>
+        </div>
+    <!-- Sección de Enlaces Rápidos -->
+    <div class="footer-section">
+        <p>Innovación y tecnología para tu negocio.</p>
+    </div>
+
+        <!-- Sección de Redes Sociales -->
+        <div class="footer-section">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/people/Q-tap-Software/61573588761824/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/qtapsoftware/#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Derechos reservados -->
+    <div class="footer-bottom">
+        © 2025 Q-Tap Software - Todos los derechos reservados.
+        <p>Desarrollado por <a href="https://q-tapsoftware.netlify.app/" target="_blank">Q-Tap Software</a></p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

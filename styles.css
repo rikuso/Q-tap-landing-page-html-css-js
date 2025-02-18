@@ -1,0 +1,1001 @@
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: "Raleway", sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000, #0a0a0a, #1a1a1a);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.navbar .logo-container {
+    display: flex;
+    align-items: center;
+    background-color: #ffffffd0;
+    padding: 10px 15px;
+    border-radius: 600px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navbar img {
+    width: 8%;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #007bff;
+}
+
+/* Menú responsive */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        text-align: center;
+        padding: 10px 0;
+    }
+    .navbar ul.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    transform: translateY(50px);
+}
+
+/* Secciones */
+
+.section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    opacity: 0;
+    transform: translateY(100%);
+    padding: 20px;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* 📱 Estilos Responsivos */
+@media (max-width: 1024px) {
+    .section h2 {
+        font-size: 2.5rem;
+    }
+    
+    .section p {
+        font-size: 1.3rem;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section h2 {
+        font-size: 2rem;
+    }
+    
+    .section p {
+        font-size: 1.2rem;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section p {
+        font-size: 1rem;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar img {
+       width: 20%;
+    }
+
+    .navbar ul {
+        gap: 8px;
+    }
+
+    .navigation-buttons button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .section {
+        width: 95%;
+        max-width: 400px;
+        padding: 10px;
+    }
+}
+
+/*prueba de hero home ----------------------------------------*/
+.inicio {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    z-index: -1;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption {
+    position: absolute;
+    right: 15%;
+    bottom: 350px;
+    left: 15%;
+    color: #6c757d;
+    text-align: left;
+    z-index: 1;
+}
+
+.caption h1, .caption p {
+    color: #fff;
+}
+.caption h5{
+    color : #007bff;
+}
+
+h5 {
+    font-size: 4.25rem;
+}
+
+@media (max-width: 991.98px) {
+    .caption {
+        right: 10%;
+        bottom: 250px;
+        left: 10%;
+    }
+    .caption h5 {
+        font-size: 3rem;
+    }
+    .caption h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .caption {
+        right: 10%;
+        bottom: 180px;
+        left: 10%;
+        text-align: center;
+    }
+    .caption h5 {
+        font-size: 26px;
+    }
+    .caption h1 {
+        font-size: 30px;
+        font-weight: 900;
+    }
+}
+
+
+/* Estilo para el botón */
+.btn {
+    pointer-events: auto; /* Asegura que el botón sea clickeable */
+    position: relative; /* Asegura que tenga un contexto de apilamiento */
+    z-index: 9990; /* Asegura que esté por encima de otros elementos */
+    color: #fff; /* Color del texto */
+    background-color: #007bff; /* Fondo azul */
+    border-color: #007bff; /* Borde azul */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    border-radius: 30px; /* Bordes redondeados */
+    padding: 0.75rem 1.5rem; /* Relleno dentro del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: 600; /* Peso de la fuente */
+    transition: background-color 0.3s, border-color 0.3s; /* Suaviza la transición */
+}
+
+/* Estilo para el botón al pasar el cursor (hover) */
+.btn:hover {
+    background-color: #0056b3; /* Fondo más oscuro */
+    border-color: #0056b3; /* Borde más oscuro */
+}
+
+/* Estilo cuando el botón está en estado de "activo" (cuando se hace clic) */
+.btn:active {
+    background-color: #004085; /* Fondo aún más oscuro */
+    border-color: #003366; /* Borde aún más oscuro */
+}
+
+/*prueba de hero home ----------------------------------------*/
+
+/* Acerca de */
+/* Sección "Acerca de Nosotros" */
+#about {
+    background: linear-gradient(135deg, #000000, #0a0a0a, #1a1a1a);
+    padding: 50px 0;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+#about p {
+    font-size: 1.1em;
+    color: #ffffff;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Contenedor de tarjetas en fila */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las tarjetas */
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Estilos para las tarjetas */
+.info-card {
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 430px; /* Máximo de 430px */
+    box-shadow: 0 4px 12px rgb(255, 255, 255);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Títulos dentro de las tarjetas */
+.info-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #00aaff;
+}
+
+/* Descripción de las tarjetas */
+.info-card p, .info-card ul {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.info-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-card ul li {
+    margin-bottom: 5px;
+}
+
+/* Efecto hover */
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsividad */
+
+@media (max-width: 1024px) {
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+        max-width: 80%;
+    }
+
+    .info-card {
+        width: 100%;
+        max-width: 380px; /* Tamaño más pequeño en pantallas intermedias */
+    }
+}
+
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 1.8rem;
+    }
+
+    #about p {
+        font-size: 0.9rem;
+        max-width: 90%;
+    }
+
+    .cards-container {
+        flex-direction: column; /* Organiza las tarjetas en columna en pantallas pequeñas */
+        align-items: center; /* Centra las tarjetas */
+        overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    }
+
+    .info-card {
+        width: 100%;  /* Las tarjetas ocupan todo el ancho disponible */
+        max-width: 330px; /* Máximo de 350px */
+    }
+}
+
+@media (max-width: 480px) {
+    #about h2 {
+        font-size: 1.5rem;
+    }
+
+    #about p {
+        font-size: 0.8rem;
+        max-width: 90%;
+    }
+
+    .info-card {
+        width: 100%; /* Ocupa el 100% del ancho disponible */
+        max-width: 330px;
+    }
+}
+
+/*Servicios*/
+/* Carrusel general */
+#services {
+    background: linear-gradient(135deg, #000000, #0a0a0a, #1a1a1a);
+    padding: 50px 0;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 20px;
+    
+}
+
+#services p {
+    font-size: 1em;
+    color: #ffffff;
+    margin-bottom: 70px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Estilos del carrusel */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    position: relative;
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+
+.carousel-item {
+    flex: 0 0 50%; /* Mostrar 2 elementos a la vez */
+    box-sizing: border-box;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: left;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item h3 {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.carousel-item p {
+    font-size: 1em;
+    color: #777;
+}
+
+.carousel-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+/* Flechas de navegación */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-nav .prev, .carousel-nav .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2em;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.carousel-nav .prev:hover, .carousel-nav .next:hover {
+    background-color: #007bff;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%;  /* Aseguramos que el carrusel ocupe toda la pantalla en móviles */
+    }
+
+    .carousel-item {
+        flex: 0 0 40%;  /* En móviles, solo mostramos un elemento por vez */
+    }
+    .carousel-item p{
+        font-size: 0.2em;
+    
+    }
+}
+
+/* Sección de Beneficios */
+#benefits {
+    background: linear-gradient(135deg, #000000, #0a0a0a, #1a1a1a);
+    padding: 50px 0;
+    text-align: center;
+}
+
+#benefits h2 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+#benefits p {
+    font-size: 1em;
+    color: #ffffff;
+    margin-bottom: 70px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+
+/*WHATSAAP*/
+/* Estilos del botón de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* 20px desde el fondo */
+    right: 20px; /* 20px desde la derecha */
+    background-color: #25D366; /* Color de fondo de WhatsApp */
+    color: white;
+    padding: 10px 12px; /* Menor padding para hacer el botón más pequeño */
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(255, 254, 254, 0.15);
+    text-decoration: none;
+    font-size: 0.9em; /* Texto más pequeño */
+    z-index: 1000;
+    transition: all 0.3s ease;
+    opacity: 0.9; /* Ligera transparencia para un efecto más elegante */
+}
+
+/* Efecto hover del botón */
+.whatsapp-button:hover {
+    transform: scale(1.05); /* Menor agrandamiento en el hover */
+    opacity: 1; /* Elimina la transparencia al pasar el ratón */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Más sombra al pasar el ratón */
+}
+
+/* Estilo para el logo de WhatsApp */
+.whatsapp-button i {
+    font-size: 1.4em; /* Tamaño más pequeño del icono */
+    margin-right: 8px; /* Menor espacio entre el icono y el texto */
+}
+
+/* Estilo del texto del botón */
+.whatsapp-button span {
+    font-size: 0.9em; /* Texto más pequeño */
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-button {
+        padding: 8px 10px; /* Ajuste de padding */
+    }
+
+    .whatsapp-button i {
+        font-size: 1.2em; /* Tamaño del icono un poco más pequeño en móviles */
+    }
+
+    .whatsapp-button span {
+        font-size: 0.8em; /* Texto más pequeño */
+    }
+
+    /* Ocultar el texto en pantallas más pequeñas */
+    .whatsapp-button span {
+        display: none; /* El texto solo se ocultará en pantallas pequeñas */
+    }
+}
+/* Galleria*/
+/*
+Estilos para la sección de la galería
+*/
+/* Sección de la galería */
+.gallery-section {
+    background: linear-gradient(135deg, #000000, #0a0a0a, #1a1a1a);
+    padding: 50px 20px;
+    text-align: center;
+    color: #007bff;
+}
+
+/* Carrusel */
+.gallery-carousel {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Contenedor de imágenes */
+.carousel-wrapper {
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-itemsG {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200%; /* Doble para efecto infinito */
+}
+
+/* Imágenes */
+.carousel-itemsG img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+.prevG {
+    left: 10px;
+}
+
+.nextG {
+    right: 10px;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .gallery-carousel {
+        width: 95%;
+    }
+    .carousel-items img {
+        width: 100%;
+    }
+}
+
+
+
+
+
+/*
+Estilos bono de descuento
+*/
+/* Estilos para la sección del bono de descuento */
+.discount-section {
+   background: linear-gradient(135deg, #000000, #0a0a0a, #1a1a1a);
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+/* Contenido del bono */
+.discount-content {
+    background: linear-gradient(135deg, #ffcc00, #ff6600);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);
+    display: inline-block;
+    max-width: 600px;
+    color: #fff;
+}
+
+/* Título llamativo */
+.discount-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Texto destacado */
+.discount-content p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.discount-content span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #ffcc00;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Texto pequeño */
+.small-text {
+    font-size: 0.9rem;
+    color: #f0f0f0;
+    font-style: italic;
+}
+
+/* Botón atractivo */
+.claim-btn {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.claim-btn:hover {
+    background-color: #cc0000;
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .discount-content {
+        max-width: 90%;
+    }
+    .discount-content h2 {
+        font-size: 1.8rem;
+    }
+    .discount-content p {
+        font-size: 1rem;
+    }
+    .claim-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Contacto */
+
+/* Estilos del formulario de contacto */
+.contact-form-section {
+    background: linear-gradient(135deg, #000000, #0a0a0a, #1a1a1a);
+    padding: 2px; /* Reducimos el padding para hacerlo más compacto */
+    border-radius: 8px;
+    max-width: 500px;
+    max-height: 500PX;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.15);
+}
+
+.contact-form-section h2 {
+    font-size: 1.7em; /* Ajustamos el tamaño */
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.contact-form-section p {
+    font-size: 0.95em; /* Reducimos el tamaño del texto */
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 6px;/* Añadimos un margen inferior */
+    text-align: left;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;/* Ajustamos el ancho al 100% */
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 0.95em;
+    color: #333;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 50px; /* Reducimos la altura mínima */
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;/* Ajustamos el padding */
+    font-size: 1em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividad */
+
+/* Tablets y pantallas grandes */
+@media (max-width: 1024px) {
+    .contact-form-section {
+        max-width: 80%;
+        padding: 20px;
+    }
+    .contact-form-section h2 {
+        font-size: 1.5em;
+    }
+    .contact-form-section p {
+        font-size: 0.9em;
+    }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 0.9em;
+    }
+}
+
+/* Smartphones y pantallas más pequeñas */
+@media (max-width: 768px) {
+    .contact-form-section {
+        max-width: 90%;
+        padding: 15px;
+    }
+    .contact-form-section h2 {
+        font-size: 1.4em;
+    }
+    .contact-form-section p {
+        font-size: 0.95em;
+    }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 1em;
+    }
+}
+
+/* Dispositivos muy pequeños, como móviles en modo retrato */
+@media (max-width: 480px) {
+    .contact-form-section {
+        padding: 5px;
+        
+    }
+    .contact-form-section h2 {
+        font-size: 0.9em;
+    }
+    .contact-form-section p {
+        font-size: 0.85em;
+    }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 0.9em;
+    }
+}
+
+
+/*fotter*/
+/* Estilos generales del footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+}
+
+/* Contenedor principal */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Secciones del footer */
+.footer-section {
+    flex: 1;
+    text-align: center;
+}
+
+/* Títulos y enlaces */
+.footer-section h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #00aaff;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+/* Redes sociales */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: #00aaff;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #fff;
+}
+
+/* Derechos reservados */
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #bbb;
+    width: 100%;
+    padding-top: 5px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 5px 0;
+    }
+}
